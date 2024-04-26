@@ -6,5 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function roll() {
   die = Math.floor(Math.random() * 6) + 1;
-  document.getElementById('diceRoll').innerHTML = die;
+  document.getElementById('diceRoll').innerHTML = "You rolled a " + die;
 }
+
+
