@@ -15,9 +15,9 @@ header {
 
 
 div {
-    display: flex;
+    display: grid;
     margin-top: 100px;
-    margin-bottom: 100px;;
+    margin-bottom: 100px;
 }
 
 footer {
@@ -29,6 +29,7 @@ footer {
 
 @media screen and (max-width: 800px) {
     div {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
