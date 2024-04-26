@@ -2,9 +2,17 @@ h1 {
     text-align: center;
 }
 
+#dice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
 div {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
 }
+
