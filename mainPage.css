@@ -1,6 +1,10 @@
-h1 {
-    text-align: center;
+header {
+    display: flex;;
+    background-color: #c2bbbb8e;
+    align-items: center;
+    justify-content: center;
 }
+
 
 #dice {
     display: flex;
@@ -9,9 +13,18 @@ h1 {
     width: 300px;
 }
 
+
 div {
     display: flex;
     margin-top: 100px;
+    margin-bottom: 100px;;
+}
+
+footer {
+    width: 100%;
+    background-color: #c2bbbb8e;
+    text-align: center;
+    padding: 10px;
 }
 
 @media screen and (max-width: 800px) {
