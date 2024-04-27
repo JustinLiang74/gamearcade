@@ -5,19 +5,55 @@ header {
     justify-content: center;
 }
 
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
 
-#dice {
+.item {
+    opacity: 0;
+    animation: scroll-up 1s ease forwards;
+}
+
+@keyframes scroll-up{
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item:nth-child(1) {
+    animation-delay: 0.5s; 
+}
+
+.item:nth-child(2) {
+    animation-delay: 1s; 
+}
+
+.item:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.item:nth-child(4) {
+    animation-delay: 2s;
+}
+
+#dice, #tictactoe {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
 }
 
-
 div {
-    display: grid;
     margin-top: 100px;
     margin-bottom: 100px;
+    margin-right: 12px;
 }
 
 footer {
