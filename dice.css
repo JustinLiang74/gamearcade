@@ -1,7 +1,61 @@
 body {
-    background-color: #f0f0f0;
-    font-family: 'Roboto', sans-serif;
+    background-image: url("img/diceBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
     margin: 12px;
     padding: 0;
+    text-shadow: 2px 2px 4px #000000;
 }
 
+#diceGame {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#diceImage {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+#rollButton, #resetButton {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+
+#rollButton:hover, #resetButton:hover {
+    background-color: #45a049;
+}
+
+
+
+#diceResult{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    text-decoration: wavy;
+    color: rgb(207, 169, 63);
+    text-shadow: 2px 2px 4px #000000;
+    margin: 0%;
+}
+
+@media screen and (max-width: 800px) {
+    .buttonContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #rollButton, #resetButton {
+        width: 100%;
+    }
+
+}

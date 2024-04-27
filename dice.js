@@ -12,12 +12,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+let isAnimating = false;
+
 function roll() {
-  die = Math.floor(Math.random() * 6) + 1;
-  document.getElementById('diceRoll').innerHTML = "You rolled a " + die;
-  total += die;
-  document.getElementById('diceTotal').innerHTML = "Total: " + total;
-  check();
+  if (isAnimating) {
+    return;
+  }
+  
+  isAnimating = true;
+  document.getElementById('rollButton').disabled = true;
+  
+  document.getElementById('diceResult').innerHTML = "Rolling...";
+  
+  setTimeout(() => {
+    die = Math.floor(Math.random() * 6) + 1;
+    document.getElementById('diceRoll').innerHTML = "You rolled a " + die;
+    total += die;
+    document.getElementById('diceTotal').innerHTML = "Total: " + total;
+    check();
+    
+    isAnimating = false;
+    document.getElementById('rollButton').disabled = false;
+  }, 1000); // Change the delay time as needed
 }
 
 function check() {
