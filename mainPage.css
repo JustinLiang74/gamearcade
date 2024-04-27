@@ -9,6 +9,7 @@ header {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .item, .item2 {
@@ -43,7 +44,7 @@ header {
     animation-delay: 2s;
 }
 
-#dice, #tictactoe {
+#dice, #tictactoe, #connect4{
     display: flex;
     justify-content: center;
     align-items: center;
