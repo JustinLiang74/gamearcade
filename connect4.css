@@ -1,0 +1,11 @@
+body {
+    background-image: url("img/diceBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 12px;
+    padding: 0;
+    text-shadow: 2px 2px 4px #000000;
+}
