@@ -11,7 +11,7 @@ header {
     justify-content: center;
 }
 
-.item {
+.item, .item2 {
     opacity: 0;
     animation: scroll-up 1s ease forwards;
 }
@@ -35,11 +35,11 @@ header {
     animation-delay: 1s; 
 }
 
-.item:nth-child(3) {
+.item2:nth-child(1) {
     animation-delay: 1.5s;
 }
 
-.item:nth-child(4) {
+.item2:nth-child(2) {
     animation-delay: 2s;
 }
 
@@ -51,12 +51,14 @@ header {
 }
 
 div {
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 100px;
     margin-right: 12px;
+    margin-left: 12px;
 }
 
 footer {
+    bottom: 0;
     width: 100%;
     background-color: #c2bbbb8e;
     text-align: center;
