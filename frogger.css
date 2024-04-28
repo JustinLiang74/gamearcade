@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+    color: white;
+    margin-left: 20px;
+}
+
+h2 {
+    color:black;
+}
+
+canvas {
+    border: 1px solid white;
+    background: black;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background: black;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    header {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2px;
+    }
+    h2 {
+        color:white;
+    }
+    #instructions {
+        color: white;
+    }
+}
