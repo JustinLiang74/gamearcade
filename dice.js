@@ -29,10 +29,11 @@ function roll() {
     document.getElementById('diceRoll').innerHTML = "You rolled a " + die;
     total += die;
     document.getElementById('diceTotal').innerHTML = "Total: " + total;
-    check();
+    
     
     isAnimating = false;
     document.getElementById('rollButton').disabled = false;
+    check();
   }, 1000); // Change the delay time as needed
 }
 
