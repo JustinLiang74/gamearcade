@@ -5,7 +5,41 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: white;
-    margin: 12px;
+    margin: 0;
     padding: 0;
     text-shadow: 2px 2px 4px #000000;
 }
+
+#connect4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center;
+}
+
+#board {
+    max-width: 350px; /* Adjust as needed */
+    width: calc(50px * 7); /* Width of 7 circles */
+    height: calc(50px * 6); /* Height of 6 circles */
+    background-color: blue; /* Change color as desired */
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 2px;
+}
+
+#board .cell {
+    background-color: white; /* Change color as desired */
+    border-radius: 50%;
+}
+
+#message {
+    margin-top: 20px;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+}
+
