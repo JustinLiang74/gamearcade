@@ -4,20 +4,22 @@ html, body {
 }
 
 body {
-    background: rgb(255, 251, 251);
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
     margin-bottom: 20px;
-}
-
-h1, h2 {
     color: white;
     margin-left: 20px;
+}
+
+h2 {
+    color:black;
 }
 
 canvas {
@@ -30,6 +32,7 @@ canvas {
 @media screen and (min-width: 768px) {
     body {
         background: black;
+        text-shadow: 2px 2px 4px #000000;
     }
     header {
         display: flex;
@@ -37,5 +40,11 @@ canvas {
         top: 0;
         left: 0;
         padding: 2px;
+    }
+    h2 {
+        color:white;
+    }
+    #instructions {
+        color: white;
     }
 }
