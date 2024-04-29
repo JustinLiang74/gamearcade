@@ -40,15 +40,15 @@ header {
     animation-delay: 1.5s; 
 }
 
-.item2:nth-child(1) {
+.item:nth-child(4) {
     animation-delay: 2s;
 }
 
-.item2:nth-child(2) {
+.item2:nth-child(1) {
     animation-delay: 2.5s;
 }
 
-#dice, #tictactoe, #connect4{
+#dice, #tictactoe, #connect4, #frogger{
     display: flex;
     justify-content: center;
     align-items: center;

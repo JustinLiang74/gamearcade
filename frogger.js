@@ -1,8 +1,21 @@
+// Created Lives and Game Over alert
+let lives = 6;
+document.getElementById('lives').innerHTML = "Lives: " + lives;
+function countLives(){
+  document.getElementById('lives').innerHTML = "Lives: " + lives;
+  if (lives === 0) {
+    alert("Game Over");
+    location.reload();
+  }
+}
+
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
 const grid = 48;
 const gridGap = 10;
+
 
 // a simple sprite prototype function
 function Sprite(props) {
@@ -284,6 +297,8 @@ function loop() {
       if (froggerRow > rows.length / 2) {
         frogger.x = grid * 6;
         frogger.y = grid * 13;
+        lives--;
+        countLives();
       }
       // move frogger along with obstacle
       else {
@@ -312,6 +327,8 @@ function loop() {
     if (froggerRow < rows.length / 2 - 1) {
       frogger.x = grid * 6;
       frogger.y = grid * 13;
+      lives--;
+      countLives();
     }
   }
 }
