@@ -1,93 +1,64 @@
-// Constants for rows and columns
+// constants for rows and columns, colors
 const ROWS = 6;
 const COLS = 7;
 const RED = 'red';
 const YELLOW = 'yellow';
 
-// Get reference to the board element
-const boardElement = document.getElementById('board');
+var playerRed = RED
+var playerYellow = YELLOW
+var currentPlayer = playerRed
 
-// Create empty game board
-let board = [];
-for (let i = 0; i < ROWS; i++) {
-    board[i] = [];
-    for (let j = 0; j < COLS; j++) {
-        board[i][j] = null;
-    }
-}
+var gameOver = false;
 
-let currentPlayer = RED; // Start with red player
+// keep track of remaining space left in columns
+var colHeights = [];
+var board;
 
-// Function to render the game board
-function renderBoard() {
-    boardElement.innerHTML = '';
-    for (let i = 0; i < ROWS; i++) {
-        for (let j = 0; j < COLS; j++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            if (board[i][j] === null) {
-                cell.classList.add('empty');
-            } else {
-                cell.classList.add(board[i][j]);
-            }
-            cell.dataset.row = i;
-            cell.dataset.col = j;
-            boardElement.appendChild(cell);
-        }
-    }
-}
-
-function handleMove(event) {
-    const col = event.target.dataset.col;
-    const row = findEmptyRow(parseInt(col));
-
-    if (row !== -1) {
-        // Drop the piece into the lowest available row in the column
-        const cell = boardElement.querySelector(`[data-row="${row}"][data-col="${col}"]`);
-        cell.classList.remove('empty');
-        cell.classList.add(currentPlayer);
-        board[row][col] = currentPlayer;
-
-        if (checkWin(row, col)) {
-            document.getElementById('message').innerText = `${currentPlayer.toUpperCase()} wins!`;
-            boardElement.removeEventListener('click', handleMove);
-        } else {
-            currentPlayer = currentPlayer === RED ? YELLOW : RED;
-            document.getElementById('message').innerText = `Player ${currentPlayer.toUpperCase()}'s turn`;
-        }
-    }
-}
-
-
-function findEmptyRow(col) {
-    for (let i = ROWS - 1; i >= 0; i--) {
-        if (board[i][col] === null) {
-            return i;
-        }
-    }
-    return -1; // Column is full
-}
-
-
-function resetGame() {
-    board = [];
-    for (let i = 0; i < ROWS; i++) {
-        board[i] = [];
-        for (let j = 0; j < COLS; j++) {
-            board[i][j] = null;
-        }
-    }
-    currentPlayer = RED;
+window.onload = function() {
     renderBoard();
-    document.getElementById('message').innerText = `Player ${currentPlayer.toUpperCase()}'s turn`;
-    boardElement.addEventListener('click', handleMove);
 }
 
-// Add event listener for the reset button
-document.getElementById('resetButton').addEventListener('click', resetGame);
+// function to render the game board
+function renderBoard() {
+    board = [];
+    colHeights  = [5, 5, 5, 5, 5, 5, 5];
 
-// Add event listener for the game board cells
-boardElement.addEventListener('click', handleMove);
+    for (let row = 0; row < ROWS; row++) {
+        let currentRow = [];
+        for (let col = 0; col < COLS; col++) {
+            // JS
+            currentRow.push(' ');
+            // HTML
+            let cell = document.createElement("div");
+            cell.id = row.toString() + "-" + col.toString();
+            cell.classList.add("cell");
+            cell.addEventListener("click", handleMove);
+            document.getElementById("board").append(cell);
+        }
+        board.push(currentRow);
+    }
+}
 
-// Call renderBoard to display the initial empty board
-renderBoard();
+// TODO handleMove, checkWinner, declareWinner, resetGame
+
+// drop piece into column on click, and alternate turns
+function handleMove(){
+    return
+}
+
+// use sliding window to check horizontally, vertically, and both diagonals for 4 in a row
+function checkWinner(){
+    return
+}
+
+// when winner is detected display message on screen and end game
+function declareWinner(){
+    return
+}
+
+// reset board on button click
+function resetGame(){
+    return
+}
+
+
