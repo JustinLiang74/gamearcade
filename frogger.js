@@ -1,4 +1,5 @@
-let lives = 3;
+// Created Lives and Game Over alert
+let lives = 6;
 document.getElementById('lives').innerHTML = "Lives: " + lives;
 function countLives(){
   document.getElementById('lives').innerHTML = "Lives: " + lives;
