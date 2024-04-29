@@ -13,31 +13,39 @@ body {
 #connect4 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
+    align-items: center;
     text-align: center;
 }
 
 #board {
-    max-width: 350px; /* Adjust as needed */
-    width: calc(50px * 7); /* Width of 7 circles */
-    height: calc(50px * 6); /* Height of 6 circles */
-    background-color: blue; /* Change color as desired */
+    width: calc(70px * 7);
+    height: calc(70px * 6);
+    background-color: blue;
     padding: 10px;
+    margin: 0 auto;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(7, 50px);
-    grid-template-rows: repeat(6, 50px);
-    gap: 2px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#board .cell {
-    background-color: white; /* Change color as desired */
+.cell {
+
+    background-color: white;
     border-radius: 50%;
+    border: 5px navy;
+    margin: 5px;
+    height: 60px;
+    width: 60px;
 }
 
-#message {
-    margin-top: 20px;
+.red-piece {
+    background-color: red;
 }
+
+.yellow-piece {
+    background-color: yellow;
+}
+
 
 .buttonContainer {
     margin-top: 20px;
