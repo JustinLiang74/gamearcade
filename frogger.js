@@ -9,7 +9,12 @@ function countLives(){
   }
 }
 
-
+let score = 0;
+document.getElementById('score').innerHTML = "Score: " + score;
+function countScore(){
+  score += 100;
+  document.getElementById('score').innerHTML = "Score: " + score;
+}
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
@@ -316,6 +321,7 @@ function loop() {
     if (froggerRow === 0 && col % 3 === 0 &&
         // check to see if there isn't a scored frog already there
         !scoredFroggers.find(frog => frog.x === col * grid)) {
+      countScore();
       scoredFroggers.push(new Sprite({
         ...frogger,
         x: col * grid,

@@ -10,6 +10,15 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
+#home {
+    width: 50px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+}
+
 #diceGame {
     display: flex;
     flex-direction: column;

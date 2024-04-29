@@ -25,6 +25,23 @@ header {
     text-align: center;
 }
 
+.title {
+    text-align: center;
+    background-color: blueviolet;
+    border-radius: 10px;
+    width: 30%
+}
+
+
+img {
+    width: 50px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+}
+
 h2 {
     margin: 0 auto;
     color: white;
@@ -38,17 +55,22 @@ canvas {
 }
 
 @media screen and (min-width: 768px) {
-    body {
-        text-shadow: 2px 2px 4px #000000;
-    }
     header {
         display: flex;
         position: absolute;
+        margin-top: 10px;
         top: 0;
         left: 0;
         padding: 2px;
     }
-    h2 {
-        color:white;
+    .title {
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        background-color: blueviolet;
+        width: 25%;
+        border-radius: 10px;
     }
 }

@@ -1,8 +1,29 @@
 header {
-    display: flex;;
+    display: flex;
     background-color: #c2bbbb8e;
     align-items: center;
     justify-content: center;
+}
+
+body {
+    background-color: #e4bb4d;
+    animation: animateBackground 10s;
+}
+
+@keyframes animateBackground {
+    0% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #b97d55;
+    }
+    100% {
+        background-color: #e4bb4d;
+    }
+}
+
+img {
+    border-radius: 10px;
 }
 
 .container {
@@ -15,6 +36,7 @@ header {
 .item, .item2 {
     opacity: 0;
     animation: scroll-up 1s ease forwards;
+    text-align: center;
 }
 
 @keyframes scroll-up{
