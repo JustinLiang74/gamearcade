@@ -12,7 +12,7 @@ body {
 
 @keyframes animateBackground {
     0% {
-        background-color: #ffffff;
+        background-color: #ffd891;
     }
     50% {
         background-color: #b97d55;
@@ -31,6 +31,9 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
 }
 
 .item, .item2 {
