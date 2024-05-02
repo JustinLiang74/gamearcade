@@ -1,0 +1,75 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 10px;
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    width: 50px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#guessCount {
+    font-size: 16px;
+    color: #777;
+}
+
+#feedback {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#questionMarksImage {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ 
+ #guessText {
+    position: relative;
+ }
+
+ 
+ 
+ 
