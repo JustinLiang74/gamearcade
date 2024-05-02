@@ -73,7 +73,7 @@ img {
     animation-delay: 2.5s;
 }
 
-#dice, #tictactoe, #connect4, #frogger{
+#dice, #tictactoe, #guessinggame, #frogger{
     display: flex;
     justify-content: center;
     align-items: center;
