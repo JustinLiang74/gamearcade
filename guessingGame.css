@@ -6,10 +6,20 @@ body {
     padding: 0;
 }
 
+img {
+    width: 50px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px;
+ }
+
 h1 {
     color: #333;
     font-size: 36px;
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 input {
@@ -31,15 +41,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-img {
-    width: 50px;
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 2px;
-}
-
 header {
     background-color: #333;
     color: white;
@@ -55,21 +56,28 @@ header {
 #feedback {
     font-size: 20px;
     margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-#questionMarksImage {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
- }
- 
- #guessText {
+#guessText {
     position: relative;
- }
+    animation: slideIn 1s ease-in-out;
+}
 
- 
- 
- 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
