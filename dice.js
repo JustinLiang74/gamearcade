@@ -94,7 +94,7 @@ function check() {
   } else if (total >= 20) {
     document.getElementById('diceResult').innerHTML = "You Lose!";
     document.getElementById('rollButton').disabled = true;
-  } else if (total < 17) {
+  } else if (total <= 17) {
     document.getElementById('diceResult').innerHTML = "Roll again!";
   }
 }
