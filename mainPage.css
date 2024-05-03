@@ -17,8 +17,6 @@ body {
     background-image: url("img/tabletop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #e4bb4d; */
-    /* animation: animateBackground 10s; */
 }
 
 footer {
@@ -27,18 +25,6 @@ footer {
     left: 0;
     width: 100%;
 }
-
-/* @keyframes animateBackground {
-    0% {
-        background-color: #ffd891;
-    }
-    50% {
-        background-color: #b97d55;
-    }
-    100% {
-        background-color: #e4bb4d;
-    }
-} */
 
 img {
     border-radius: 10px;
@@ -86,8 +72,6 @@ img {
 .item:nth-child(4) {
     animation-delay: 2s;
 }
-
-
 
 #dice, #tictactoe, #guessinggame, #frogger{
     display: flex;
