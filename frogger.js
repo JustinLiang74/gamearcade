@@ -15,6 +15,25 @@ function countScore(){
   score += 100;
   document.getElementById('score').innerHTML = "Score: " + score;
 }
+
+
+document.getElementById('up-button').addEventListener('click', function() {
+  frogger.y -= grid;
+  frogger.y = Math.min( Math.max(grid, frogger.y), canvas.height - grid * 2);
+});
+document.getElementById('down-button').addEventListener('click', function() {
+  frogger.y += grid;
+  frogger.y = Math.min( Math.max(grid, frogger.y), canvas.height - grid * 2);
+});
+document.getElementById('left-button').addEventListener('click', function() {
+  frogger.x -= grid;
+  frogger.x = Math.min( Math.max(0, frogger.x), canvas.width - grid);
+});
+document.getElementById('right-button').addEventListener('click', function() {
+  frogger.x += grid;
+  frogger.x = Math.min( Math.max(0, frogger.x), canvas.width - grid);
+});
+
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 
@@ -330,14 +349,22 @@ function loop() {
     }
 
     // reset frogger if not on obstacle in river
-    if (froggerRow < rows.length / 2 - 1) {
+    if (froggerRow < rows.length / 2 - 1 && froggerRow !== 0) {
       frogger.x = grid * 6;
       frogger.y = grid * 13;
       lives--;
       countLives();
     }
+    // reset frogger if it reaches the end bank
+    if (froggerRow === 0 && frogger.y === grid) {
+      frogger.x = grid * 6;
+      frogger.y = grid * 13;
+    }
   }
 }
+
+
+
 
 // listen to keyboard events to move frogger
 document.addEventListener('keydown', function(e) {

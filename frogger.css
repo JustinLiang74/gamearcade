@@ -32,6 +32,18 @@ header {
     width: 30%
 }
 
+.arrow-button {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 50px;
+    margin: 3px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
 
 img {
     width: 50px;
@@ -72,5 +84,9 @@ canvas {
         background-color: blueviolet;
         width: 25%;
         border-radius: 10px;
+    }
+    
+    .arrow-button {
+        display: none;
     }
 }
