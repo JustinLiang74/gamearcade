@@ -8,7 +8,7 @@ function countLives(){
     location.reload();
   }
 }
-
+// Checks score and adds 100 points per frog at the end bank
 let score = 0;
 document.getElementById('score').innerHTML = "Score: " + score;
 function countScore(){
@@ -16,7 +16,7 @@ function countScore(){
   document.getElementById('score').innerHTML = "Score: " + score;
 }
 
-
+// Created buttons for mobile users
 document.getElementById('up-button').addEventListener('click', function() {
   frogger.y -= grid;
   frogger.y = Math.min( Math.max(grid, frogger.y), canvas.height - grid * 2);

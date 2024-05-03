@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Updates the text when the user selects a gamemode
 function changeText(text){
   document.getElementById("instructions").innerHTML = text;
 }
-  
 
+// Returns the value of the selected gamemode
 function getGamemode(){
   let radios = document.getElementsByName('gamemode');
   for (let i = 0; i < radios.length; i++){
@@ -30,6 +31,7 @@ function getGamemode(){
   }
 }
 
+// Checks the gamemode and calls the appropriate roll function
 function checkRoll(){
   let gamemode = getGamemode();
   if (gamemode === "solo"){
@@ -40,7 +42,7 @@ function checkRoll(){
   }
 }
 
-
+// Rolls the dice
 function roll() {
   if (isAnimating) {
     return;
@@ -65,7 +67,7 @@ function roll() {
 }
 
 
-
+// Rolls the dice for the bot and the player
 function botRoll(){
   if (isAnimating) {
     return;
@@ -87,6 +89,7 @@ function botRoll(){
   }, 1000);
 }
 
+// Checks the total to see if the player wins or loses
 function check() {
   if (total > 17 && total < 20) {
     document.getElementById('diceResult').innerHTML = "You Win!";
@@ -99,7 +102,7 @@ function check() {
   }
 }
 
-
+// Checks the winner of the bot and player
 function checkWinner(){
   if (playerDie > botDie){
     document.getElementById('diceResult').innerHTML = "You Win!";
